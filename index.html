@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Andrea Carrasco Peluquería - Estilista en Cinco Saltos, Río Negro</title>
+    <meta name="description" content="Con 15 años de experiencia, Andrea Carrasco ofrece servicios de peluquería, depilación y dermaplaning en Cinco Saltos. ¡Agenda tu turno!">
+    <meta name="keywords" content="peluqueria cinco saltos, estilista rio negro, andrea carrasco, salon de belleza, depilacion, dermaplaning, cera española, corte de pelo, coloracion, tratamientos capilares">
+    <meta name="author" content="Andrea Carrasco">
+    
+    <link rel="icon" href="img/favicon.webp" type="image/webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-primary: #2d3035;
+            --color-secondary: #f8f9fa;
+            --color-accent: #c4a97e;
+            --color-text: #343a40;
+            --color-light-text: #6c757d;
+            --color-white: #ffffff;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body { font-family: var(--font-body); background-color: var(--color-white); color: var(--color-text); line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--color-primary); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .section { padding: 80px 0; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
+        .btn { display: inline-block; padding: 12px 28px; font-weight: 500; text-decoration: none; border-radius: 50px; transition: all 0.3s ease; cursor: pointer; border: 2px solid var(--color-accent); }
+        .btn-primary { background-color: var(--color-accent); color: var(--color-white); }
+        .btn-primary:hover { background-color: #b3986c; border-color: #b3986c; }
+        .btn-secondary { background-color: transparent; color: var(--color-accent); }
+        .btn-secondary:hover { background-color: var(--color-accent); color: var(--color-white); }
+        .header { position: fixed; top: 0; left: 0; width: 100%; background-color: var(--color-white); z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 15px 0; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 50px; }
+        .nav-logo { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700; color: var(--color-primary); text-decoration: none; }
+        .nav-menu { display: flex; list-style: none; gap: 35px; }
+        .nav-link { text-decoration: none; color: var(--color-text); font-weight: 500; transition: color 0.3s ease; }
+        .nav-link:hover { color: var(--color-accent); }
+        .hamburger { display: none; cursor: pointer; }
+        .bar { display: block; width: 25px; height: 3px; margin: 5px auto; background-color: var(--color-primary); transition: all 0.3s ease-in-out; }
+        .hero { padding-top: 80px; height: 100vh; background: linear-gradient(rgba(45, 48, 53, 0.7), rgba(45, 48, 53, 0.7)), url('img/hero-background.webp') no-repeat center center/cover; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--color-white); }
+        .hero-content h1 { font-size: 4.5rem; color: var(--color-white); margin-bottom: 20px; }
+        .hero-content p { font-size: 1.2rem; margin-bottom: 40px; }
+        .hero-buttons .btn { margin: 0 10px; }
+        #about { background-color: var(--color-secondary); }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; }
+        .about-image img { width: 100%; max-width: 400px; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .about-text h3 { font-size: 1.8rem; margin-bottom: 15px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .service-card { background-color: var(--color-white); border: 1px solid #e9ecef; border-radius: 10px; padding: 30px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .service-card img { width: 80px; height: 80px; margin-bottom: 20px; align-self: center; }
+        .service-card h4 { font-size: 1.5rem; margin-bottom: 10px; }
+        .service-card p { flex-grow: 1; }
+        #portfolio { background-color: var(--color-secondary); }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        .portfolio-item img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; transition: transform 0.3s ease; }
+        .portfolio-item img:hover { transform: scale(1.05); }
+        .education-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .education-card { background-color: var(--color-white); border: 1px solid #e9ecef; border-radius: 10px; overflow: hidden; }
+        .education-card img { width: 100%; height: 200px; object-fit: cover; }
+        .education-content { padding: 25px; }
+        .education-content h4 { font-size: 1.4rem; margin-bottom: 10px; }
+        .education-content .btn { margin-top: 20px; }
+        #career { background-color: var(--color-secondary); }
+        .career-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        #contact { background-color: var(--color-primary); color: var(--color-white); }
+        #contact .section-title { color: var(--color-white); }
+        .contact-wrapper { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; background-color: var(--color-primary); }
+        .contact-info p { margin-bottom: 15px; font-size: 1.1rem; }
+        .contact-info strong { color: var(--color-accent); }
+        .contact-form { background-color: var(--color-white); padding: 40px; border-radius: 10px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ced4da; font-family: var(--font-body); }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .form-submit-btn { width: 100%; border-radius: 5px; }
+        .form-notice { margin-top: 20px; padding: 15px; background-color: #fef9e7; border-left: 4px solid var(--color-accent); color: var(--color-text); font-size: 0.9rem; border-radius: 0 5px 5px 0; }
+        .payment-box { margin-top: 30px; padding: 20px; background-color: var(--color-secondary); text-align: center; border-radius: 10px; color: var(--color-text); }
+        .payment-box .btn { background-color: #00a6e6; border-color: #00a6e6; color: var(--color-white); margin-top: 15px; }
+        .payment-box .btn:hover { background-color: #0095cf; border-color: #0095cf; }
+        #links { background-color: var(--color-secondary); }
+        .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .link-card { display: block; background-color: var(--color-white); padding: 25px; text-align: center; border-radius: 10px; border: 1px solid #e9ecef; text-decoration: none; color: var(--color-text); font-weight: 500; font-size: 1.1rem; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .link-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); color: var(--color-accent); }
+        .footer { background-color: var(--color-primary); color: rgba(255,255,255,0.7); padding: 20px 0; text-align: center; font-size: 0.9rem; }
+        .footer a { color: var(--color-white); text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        .cookie-banner { position: fixed; bottom: 0; left: 0; width: 100%; background-color: var(--color-primary); color: var(--color-white); padding: 15px; display: flex; justify-content: center; align-items: center; z-index: 1001; box-shadow: 0 -2px 10px rgba(0,0,0,0.2); }
+        .cookie-banner p { margin: 0; margin-right: 20px; }
+        .cookie-banner a { color: var(--color-accent); text-decoration: underline; }
+        .cookie-banner .btn { padding: 8px 20px; }
+        @media (max-width: 992px) {\n            .about-content, .contact-wrapper { grid-template-columns: 1fr; }\n            .about-image { text-align: center; }\n            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }\n        }\n        @media (max-width: 768px) {\n            .nav-menu { position: fixed; left: -100%; top: 80px; flex-direction: column; background-color: var(--color-white); width: 100%; text-align: center; transition: 0.3s; box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05); }\n            .nav-menu.active { left: 0; }\n            .nav-item { padding: 1.5rem 0; }\n            .hamburger { display: block; }\n            .hamburger.active .bar:nth-child(2) { opacity: 0; }\n            .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }\n            .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }\n            .hero-content h1 { font-size: 3rem; }\n            .hero-buttons { display: flex; flex-direction: column; align-items: center; }\n            .hero-buttons .btn { margin: 10px 0; width: 80%; }\n            .section { padding: 60px 0; }\n            .section-title { font-size: 2rem; }\n            .portfolio-grid { grid-template-columns: 1fr; }\n            .cookie-banner { flex-direction: column; text-align: center; }\n            .cookie-banner p { margin-right: 0; margin-bottom: 15px; }\n        }\n    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="nav-logo">Andrea Carrasco</a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#about" class="nav-link">Sobre Mí</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Servicios</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portafolio</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link">Educa tu Cabello</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Transforma tu Estilo. Eleva tu Confianza.</h1>
+                <p>15 años de pasión y experiencia en cuidado capilar y estética profesional.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">AGENDAR TURNO</a>
+                    <a href="https://wa.me/5492996079535" target="_blank" class="btn btn-secondary">CONTACTAR POR WHATSAPP</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">Sobre Andrea Carrasco</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="img/andrea-carrasco-profesional.webp" alt="Andrea Carrasco, estilista profesional">
+                    </div>
+                    <div class="about-text">
+                        <h3>Pasión, Precisión y Profesionalismo</h3>
+                        <p>Con 15 años de dedicación y formación constante en el mundo de la belleza, Andrea Carrasco ofrece un servicio integral con el más alto nivel de profesionalismo y un trato personalizado. Su compromiso es con la disponibilidad, el cumplimiento en los turnos y la excelencia en cada trabajo, garantizando resultados que superan expectativas y realzan tu belleza natural.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <div class="container">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="img/servicio-corte.webp" alt="Icono de tijeras y peine">
+                        <h4>Corte Unisex</h4>
+                        <p>Diseños modernos y clásicos adaptados a tu estilo y fisionomía.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="img/servicio-coloracion.webp" alt="Icono de brocha de coloración">
+                        <h4>Coloración y Mechas</h4>
+                        <p>Balayage, babylights, mechas localizadas y coloración global con productos premium.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="img/servicio-tratamientos.webp" alt="Icono de gota de aceite capilar">
+                        <h4>Tratamientos Capilares</h4>
+                        <p>Nutrición, keratina y alisados para un cabello sano, fuerte y brillante.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="img/servicio-venta-productos.webp" alt="Icono de botella de producto">
+                        <h4>Venta de Productos</h4>
+                        <p>Asesoramiento y venta de productos profesionales para el cuidado en casa.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="img/servicio-depilacion.webp" alt="Icono de cera de depilación">
+                        <h4>Depilación (Estilo Español)</h4>
+                        <p>Servicio de depilación facial y corporal con cera tradicional del sistema español, para una piel suave y duradera.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="img/servicio-dermaplaning.webp" alt="Icono de tratamiento facial">
+                        <h4>Dermaplaning Facial</h4>
+                        <p>Tratamiento de exfoliación física que elimina células muertas y vello facial, revelando una piel luminosa y suave.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section">
+            <div class="container">
+                <h2 class="section-title">Portafolio de Trabajos</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item"><img src="img/portafolio-1.webp" alt="Trabajo de peluquería: balayage rubio"></div>
+                    <div class="portfolio-item"><img src="img/portafolio-2.webp" alt="Trabajo de peluquería: corte bob moderno"></div>
+                    <div class="portfolio-item"><img src="img/portafolio-3.webp" alt="Trabajo de peluquería: peinado para evento"></div>
+                    <div class="portfolio-item"><img src="img/portafolio-4.webp" alt="Trabajo de peluquería: coloración cobriza"></div>
+                    <div class="portfolio-item"><img src="img/portafolio-5.webp" alt="Trabajo de peluquería: tratamiento de keratina"></div>
+                    <div class="portfolio-item"><img src="img/portafolio-6.webp" alt="Trabajo de peluquería: corte masculino"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title">Educa tu Cabello: Consejos de Expertos</h2>
+                <div class="education-grid">
+                    <div class="education-card">
+                        <img src="img/educa-articulo-1.webp" alt="Artículo sobre Cuidado Diario del cabello">
+                        <div class="education-content">
+                            <h4>Rutina de Cuidado Capilar</h4>
+                            <p>Descubre los secretos para un cabello saludable y radiante.</p>
+                            <a href="articulo-rutina.html" class="btn btn-primary">LEER MÁS</a>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <img src="img/educa-articulo-2.webp" alt="Artículo sobre Mitos de la Coloración en Casa">
+                        <div class="education-content">
+                            <h4>Mitos de la Coloración en Casa</h4>
+                            <p>Conoce los riesgos de teñirse en casa y por qué un profesional marca la diferencia.</p>
+                             <a href="articulo-mitos.html" class="btn btn-primary">LEER MÁS</a>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <img src="img/educa-articulo-3.webp" alt="Artículo sobre Tratamientos Capilares">
+                        <div class="education-content">
+                           <h4>Tratamientos: ¿Cuál es el ideal para ti?</h4>
+                           <p>Aprende a identificar las necesidades de tu pelo y elige el tratamiento perfecto.</p>
+                           <a href="articulo-tratamientos.html" class="btn btn-primary">LEER MÁS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="career" class="section">
+            <div class="container">
+                <div class="career-content">
+                    <h2 class="section-title">La Carrera de Peluquería: Más Allá de las Tijeras</h2>
+                    <p>La peluquería es mucho más que cortar y peinar cabello; es un arte, una ciencia y una profesión que combina creatividad, técnica y una profunda comprensión de la estética y la salud capilar. La formación en peluquería abarca desde el conocimiento de la estructura del cabello y el cuero cabelludo hasta las últimas tendencias en cortes, peinados y técnicas de coloración. Incluye el dominio de herramientas y productos, la capacidad de diagnosticar problemas capilares y la habilidad para aplicar tratamientos que devuelvan la vitalidad y el brillo. Pero la parte más importante es saber escuchar a los clientes, entender sus deseos y construir una relación de confianza y refleje su personalidad. Es una carrera de constante aprendizaje, innovación y, sobre todo, pasión por el bienestar y la belleza de las personas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Contacta y Agenda tu Turno</h2>
+                <p style="text-align:center; max-width: 600px; margin: -30px auto 50px auto;">Completa el formulario o contáctanos por WhatsApp para reservar tu lugar.</p>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <p><strong>WhatsApp:</strong> 299-6079535</p>
+                        <p><strong>Email:</strong> contacto@andreacarrascoestilista.shop</p>
+                        <p><strong>Ubicación:</strong> Cipolletti 49 Local 9,Cinco Saltos Río Negro Argentina.</p>
+                        <p><strong>Horario:</strong> Martes a Sábados de 09:00 – 12:30 / 17:00 – 20:30 (con cita previa)</p>
+                    </div>
+                    <div class="contact-form">
+                        <form action="https://formsubmit.co/contacto@andreacarrascoestilista.shop" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="Nombre" placeholder="Tu Nombre Completo" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="Email" placeholder="Tu Correo Electrónico" required>
+                            </div>
+                             <div class="form-group">
+                                <input type="tel" name="WhatsApp" placeholder="Tu WhatsApp (ej: 2996079535)" required>
+                            </div>
+                            <div class="form-group">
+                                <select name="Servicio" required>
+                                    <option value="" disabled selected>Selecciona un Servicio</option>
+                                    <option value="Corte Unisex">Corte Unisex</option>
+                                    <option value="Coloración y Mechas">Coloración y Mechas</option>
+                                    <option value="Tratamientos Capilares">Tratamientos Capilares</option>
+                                    <option value="Depilacion">Depilación</option>
+                                    <option value="Dermaplaning">Dermaplaning</option>
+                                    <option value="Asesoramiento de Productos">Asesoramiento de Productos</option>
+                                    <option value="Otro">Otro (especificar en detalles)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="date" name="Fecha" required>
+                            </div>
+                             <div class="form-group">
+                                <input type="time" name="Hora" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="Detalles" placeholder="Detalles adicionales o consultas"></textarea>
+                            </div>
+                            <input type="hidden" name="_next" value="https://andreacarrascoestilista.shop/gracias.html">
+                            <input type="hidden" name="_subject" value="Nuevo Turno Solicitado desde la Web!">
+                            <input type="hidden" name="_captcha" value="false">
+
+                            <button type="submit" class="btn btn-primary form-submit-btn">SOLICITAR TURNO</button>
+                        </form>
+                        <div class="form-notice">
+                            <strong>Importante:</strong> Tu turno será confirmado únicamente una vez que te contactemos por llamada telefónica o WhatsApp para coordinar los detalles. ¡Gracias por elegirnos!
+                        </div>
+                        <div class="payment-box">
+                             <p>Para confirmar tu turno, te solicitamos el pago de una seña de $15.000 ARS.</p>
+                             <a href="pago.html" class="btn" target="_blank">PAGAR SEÑA ($15.000 ARS)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <section id="links" class="section">
+            <div class="container">
+                <h2 class="section-title">Enlaces de Interés en Cinco Saltos</h2>
+                <div class="links-grid">
+                    <a href="https://cincosaltos.gob.ar/" target="_blank" rel="noopener noreferrer" class="link-card">Municipalidad de Cinco Saltos</a>
+                    <a href="https://www.bomberosra.org.ar/bomberos/81-bomberos-voluntarios-de-cinco-saltos" target="_blank" rel="noopener noreferrer" class="link-card">Bomberos Voluntarios</a>
+                    <a href="https://www.rionegro.com.ar/servicios/farmacias-de-turno/" target="_blank" rel="noopener noreferrer" class="link-card">Farmacias de Turno</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Andrea Carrasco Peluquería. Todos los derechos reservados.</p>
+            <p>Diseño por <a href="https://repfinity.app" target="_blank" rel="noopener noreferrer">Repfinity.app</a></p>
+        </div>
+    </footer>
+
+    <div class="cookie-banner" id="cookieBanner">
+        <p>Usamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestras <a href="politica-cookies.html" target="_blank">Políticas de Privacidad</a>.</p>
+        <button class="btn btn-primary" id="acceptCookie">ACEPTAR</button>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+        const cookieBanner = document.getElementById('cookieBanner');
+        const acceptCookie = document.getElementById('acceptCookie');
+        acceptCookie.addEventListener('click', () => {
+            cookieBanner.style.display = 'none';
+            localStorage.setItem('cookieAccepted', 'true');
+        });
+        if (localStorage.getItem('cookieAccepted') === 'true') {
+            cookieBanner.style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
