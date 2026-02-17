@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Andrea Carrasco Peluquería - Estilista en Cinco Saltos, Río Negro</title>
-    <meta name="description" content="Con 15 años de experiencia, Andrea Carrasco ofrece servicios de peluquería, depilación y dermaplaning en Cinco Saltos. ¡Agenda tu turno!">
+    <meta name="description" content="Con 15 años de experiencia, Andrea Carrasco ofrece servicios de peluquería, depilación y dermaplaning en Cinco Saltos.">
     <meta name="keywords" content="peluqueria cinco saltos, estilista rio negro, andrea carrasco, salon de belleza, depilacion, dermaplaning, cera española, corte de pelo, coloracion, tratamientos capilares">
     <meta name="author" content="Andrea Carrasco">
     
@@ -74,18 +74,14 @@
         .career-content { max-width: 800px; margin: 0 auto; text-align: center; }
         #contact { background-color: var(--color-primary); color: var(--color-white); }
         #contact .section-title { color: var(--color-white); }
-        .contact-wrapper { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; background-color: var(--color-primary); }
-        .contact-info p { margin-bottom: 15px; font-size: 1.1rem; }
+        .contact-wrapper { display: grid; grid-template-columns: 1fr; gap: 50px; background-color: var(--color-primary); max-width: 700px; margin: 0 auto; }
+        .contact-info { text-align: center; margin-bottom: 30px; }
+        .contact-info p { margin-bottom: 15px; font-size: 1.2rem; }
         .contact-info strong { color: var(--color-accent); }
-        .contact-form { background-color: var(--color-white); padding: 40px; border-radius: 10px; }
-        .form-group { margin-bottom: 20px; }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ced4da; font-family: var(--font-body); }
-        .form-group textarea { resize: vertical; min-height: 120px; }
-        .form-submit-btn { width: 100%; border-radius: 5px; }
-        .form-notice { margin-top: 20px; padding: 15px; background-color: #fef9e7; border-left: 4px solid var(--color-accent); color: var(--color-text); font-size: 0.9rem; border-radius: 0 5px 5px 0; }
-        .payment-box { margin-top: 30px; padding: 20px; background-color: var(--color-secondary); text-align: center; border-radius: 10px; color: var(--color-text); }
-        .payment-box .btn { background-color: #00a6e6; border-color: #00a6e6; color: var(--color-white); margin-top: 15px; }
-        .payment-box .btn:hover { background-color: #0095cf; border-color: #0095cf; }
+        .contact-whatsapp-box { background-color: var(--color-white); padding: 40px; border-radius: 10px; text-align: center; border: 2px solid var(--color-accent); }
+        .whatsapp-prominent-btn { display: inline-flex; align-items: center; justify-content: center; background-color: #25D366; color: white; padding: 20px 40px; border-radius: 50px; font-size: 1.3rem; font-weight: 700; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); border: none; width: 100%; margin-top: 20px; }
+        .whatsapp-prominent-btn:hover { background-color: #128C7E; transform: scale(1.05); }
+        .whatsapp-prominent-btn svg { margin-right: 15px; width: 30px; height: 30px; fill: white; }
         #links { background-color: var(--color-secondary); }
         .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
         .link-card { display: block; background-color: var(--color-white); padding: 25px; text-align: center; border-radius: 10px; border: 1px solid #e9ecef; text-decoration: none; color: var(--color-text); font-weight: 500; font-size: 1.1rem; transition: transform 0.3s ease, box-shadow 0.3s ease; }
@@ -97,7 +93,27 @@
         .cookie-banner p { margin: 0; margin-right: 20px; }
         .cookie-banner a { color: var(--color-accent); text-decoration: underline; }
         .cookie-banner .btn { padding: 8px 20px; }
-        @media (max-width: 992px) {\n            .about-content, .contact-wrapper { grid-template-columns: 1fr; }\n            .about-image { text-align: center; }\n            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }\n        }\n        @media (max-width: 768px) {\n            .nav-menu { position: fixed; left: -100%; top: 80px; flex-direction: column; background-color: var(--color-white); width: 100%; text-align: center; transition: 0.3s; box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05); }\n            .nav-menu.active { left: 0; }\n            .nav-item { padding: 1.5rem 0; }\n            .hamburger { display: block; }\n            .hamburger.active .bar:nth-child(2) { opacity: 0; }\n            .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }\n            .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }\n            .hero-content h1 { font-size: 3rem; }\n            .hero-buttons { display: flex; flex-direction: column; align-items: center; }\n            .hero-buttons .btn { margin: 10px 0; width: 80%; }\n            .section { padding: 60px 0; }\n            .section-title { font-size: 2rem; }\n            .portfolio-grid { grid-template-columns: 1fr; }\n            .cookie-banner { flex-direction: column; text-align: center; }\n            .cookie-banner p { margin-right: 0; margin-bottom: 15px; }\n        }\n    </style>
+        @media (max-width: 992px) {
+            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-menu { position: fixed; left: -100%; top: 80px; flex-direction: column; background-color: var(--color-white); width: 100%; text-align: center; transition: 0.3s; box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05); }
+            .nav-menu.active { left: 0; }
+            .nav-item { padding: 1.5rem 0; }
+            .hamburger { display: block; }
+            .hamburger.active .bar:nth-child(2) { opacity: 0; }
+            .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+            .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+            .hero-content h1 { font-size: 3rem; }
+            .hero-buttons { display: flex; flex-direction: column; align-items: center; }
+            .hero-buttons .btn { margin: 10px 0; width: 80%; }
+            .section { padding: 60px 0; }
+            .section-title { font-size: 2rem; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .cookie-banner { flex-direction: column; text-align: center; }
+            .cookie-banner p { margin-right: 0; margin-bottom: 15px; }
+        }
+    </style>
 </head>
 <body>
 
@@ -127,8 +143,8 @@
                 <h1>Transforma tu Estilo. Eleva tu Confianza.</h1>
                 <p>15 años de pasión y experiencia en cuidado capilar y estética profesional.</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">AGENDAR TURNO</a>
-                    <a href="https://wa.me/5492996079535" target="_blank" class="btn btn-secondary">CONTACTAR POR WHATSAPP</a>
+                    <a href="#contact" class="btn btn-primary">CONSULTAR AHORA</a>
+                    <a href="https://wa.me/5492996079535?text=te%20busqu%C3%A9%20en%20Google%20quisiera%20consultar%20por%20un%20servicio%20de%20peluquer%C3%ADa" target="_blank" class="btn btn-secondary">WHATSAPP DIRECTO</a>
                 </div>
             </div>
         </section>
@@ -142,7 +158,7 @@
                     </div>
                     <div class="about-text">
                         <h3>Pasión, Precisión y Profesionalismo</h3>
-                        <p>Con 15 años de dedicación y formación constante en el mundo de la belleza, Andrea Carrasco ofrece un servicio integral con el más alto nivel de profesionalismo y un trato personalizado. Su compromiso es con la disponibilidad, el cumplimiento en los turnos y la excelencia en cada trabajo, garantizando resultados que superan expectativas y realzan tu belleza natural.</p>
+                        <p>Con 15 años de dedicación y formación constante en el mundo de la belleza, Andrea Carrasco ofrece un servicio integral con el más alto nivel de profesionalismo y un trato personalizado. Su compromiso es con la disponibilidad, el cumplimiento en la atención y la excelencia en cada trabajo, garantizando resultados que superan expectativas y realzan tu belleza natural.</p>
                     </div>
                 </div>
             </div>
@@ -243,60 +259,19 @@
 
         <section id="contact" class="section">
             <div class="container">
-                <h2 class="section-title">Contacta y Agenda tu Turno</h2>
-                <p style="text-align:center; max-width: 600px; margin: -30px auto 50px auto;">Completa el formulario o contáctanos por WhatsApp para reservar tu lugar.</p>
+                <h2 class="section-title">Contacto vía WhatsApp</h2>
+                <p style="text-align:center; max-width: 600px; margin: -30px auto 50px auto;">Haz clic en el botón de abajo para consultar disponibilidad y reservar tu lugar de forma directa.</p>
                 <div class="contact-wrapper">
                     <div class="contact-info">
-                        <p><strong>WhatsApp:</strong> 299-6079535</p>
-                        <p><strong>Email:</strong> contacto@andreacarrascoestilista.shop</p>
-                        <p><strong>Ubicación:</strong> Cipolletti 49 Local 9,Cinco Saltos Río Negro Argentina.</p>
-                        <p><strong>Horario:</strong> Martes a Sábados de 09:00 – 12:30 / 17:00 – 20:30 (con cita previa)</p>
+                        <p><strong>WhatsApp / Móvil:</strong> 299-6079535</p>
+                        <p><strong>Horario de Atención:</strong> Martes a Sábados de 09:00 – 12:30 / 17:00 – 20:30</p>
                     </div>
-                    <div class="contact-form">
-                        <form action="https://formsubmit.co/contacto@andreacarrascoestilista.shop" method="POST">
-                            <div class="form-group">
-                                <input type="text" name="Nombre" placeholder="Tu Nombre Completo" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="Email" placeholder="Tu Correo Electrónico" required>
-                            </div>
-                             <div class="form-group">
-                                <input type="tel" name="WhatsApp" placeholder="Tu WhatsApp (ej: 2996079535)" required>
-                            </div>
-                            <div class="form-group">
-                                <select name="Servicio" required>
-                                    <option value="" disabled selected>Selecciona un Servicio</option>
-                                    <option value="Corte Unisex">Corte Unisex</option>
-                                    <option value="Coloración y Mechas">Coloración y Mechas</option>
-                                    <option value="Tratamientos Capilares">Tratamientos Capilares</option>
-                                    <option value="Depilacion">Depilación</option>
-                                    <option value="Dermaplaning">Dermaplaning</option>
-                                    <option value="Asesoramiento de Productos">Asesoramiento de Productos</option>
-                                    <option value="Otro">Otro (especificar en detalles)</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <input type="date" name="Fecha" required>
-                            </div>
-                             <div class="form-group">
-                                <input type="time" name="Hora" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea name="Detalles" placeholder="Detalles adicionales o consultas"></textarea>
-                            </div>
-                            <input type="hidden" name="_next" value="https://andreacarrascoestilista.shop/gracias.html">
-                            <input type="hidden" name="_subject" value="Nuevo Turno Solicitado desde la Web!">
-                            <input type="hidden" name="_captcha" value="false">
-
-                            <button type="submit" class="btn btn-primary form-submit-btn">SOLICITAR TURNO</button>
-                        </form>
-                        <div class="form-notice">
-                            <strong>Importante:</strong> Tu turno será confirmado únicamente una vez que te contactemos por llamada telefónica o WhatsApp para coordinar los detalles. ¡Gracias por elegirnos!
-                        </div>
-                        <div class="payment-box">
-                             <p>Para confirmar tu turno, te solicitamos el pago de una seña de $15.000 ARS.</p>
-                             <a href="pago.html" class="btn" target="_blank">PAGAR SEÑA ($15.000 ARS)</a>
-                        </div>
+                    <div class="contact-whatsapp-box">
+                        <p style="color: var(--color-text); margin-bottom: 10px;">¿Deseas consultar por un servicio?</p>
+                        <a href="https://wa.me/5492996079535?text=te%20busqu%C3%A9%20en%20Google%20quisiera%20consultar%20por%20un%20servicio%20de%20peluquer%C3%ADa" target="_blank" class="whatsapp-prominent-btn">
+                            <svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.7 69.4 27 106.2 27 122.4 0 222-99.6 222-222 0-59.3-23.1-115.1-65-157.1zM223.9 445.9c-33.1 0-65.7-8.9-94.1-25.7l-6.7-4-69.8 18.3L72 365.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.5-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 54.1 81.2 54.1 130.4 0 101.7-82.8 184.5-184.5 184.5zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.4-8.6-44.5-27.4-16.4-14.6-27.5-32.7-30.7-38.2-3.2-5.5-.3-8.5 2.4-11.2 2.5-2.6 5.5-6.5 8.3-9.8 2.8-3.2 3.7-5.5 5.6-9.2 1.9-3.7 1-6.9-.5-9.8-1.5-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.6 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                            CONSULTAR POR WHATSAPP
+                        </a>
                     </div>
                 </div>
             </div>
@@ -304,9 +279,9 @@
 
          <section id="links" class="section">
             <div class="container">
-                <h2 class="section-title">Enlaces de Interés en Cinco Saltos</h2>
+                <h2 class="section-title">Cinco Saltos: Información Útil</h2>
                 <div class="links-grid">
-                    <a href="https://cincosaltos.gob.ar/" target="_blank" rel="noopener noreferrer" class="link-card">Municipalidad de Cinco Saltos</a>
+                    <a href="https://www.meteored.com.ar/tiempo-en_Cinco+Saltos-America+Sur-Argentina-Rio+Negro--1-16812.html" target="_blank" rel="noopener noreferrer" class="link-card">Clima en Cinco Saltos</a>
                     <a href="https://www.bomberosra.org.ar/bomberos/81-bomberos-voluntarios-de-cinco-saltos" target="_blank" rel="noopener noreferrer" class="link-card">Bomberos Voluntarios</a>
                     <a href="https://www.rionegro.com.ar/servicios/farmacias-de-turno/" target="_blank" rel="noopener noreferrer" class="link-card">Farmacias de Turno</a>
                 </div>
@@ -316,7 +291,7 @@
     
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Andrea Carrasco Peluquería. Todos los derechos reservados.</p>
+            <p>&copy; 2026 Andrea Carrasco Peluquería. Todos los derechos reservados.</p>
             <p>Diseño por <a href="https://repfinity.app" target="_blank" rel="noopener noreferrer">Repfinity.app</a></p>
         </div>
     </footer>
